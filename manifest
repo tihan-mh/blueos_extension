@@ -1,15 +1,15 @@
 [
     {
         "identifier": "jmrobotics.jm-mux",
-        "name": "JM Mux Test",
+        "name": "JM Mux",
         "website": "https://www.jmrobotics.no",
         "docker": "maphstra/jm-mux",
         "description": "JM MUX Extension for BlueOS",
         "extension_logo": "https://software.jmrobotics.no/w/jm-extensions/repos/jmrobotics/jm-mux/extension_logo.png",
         "company_logo": "https://software.jmrobotics.no/w/jm-extensions/repos/jmrobotics/company_logo.png",
         "versions": {
-            "0.0.7": {
-                "identifier": "88d9adc3-8d1d-5dd6-be8b-2d5418c1efae",
+            "0.0.8": {
+                "identifier": "e8f3b2a1-7d9c-4f6b-918e-2c5a74d9f1a3",
                 "type": "other",
                 "website": "https://www.jmrobotics.no",
                 "images": [
@@ -20,8 +20,63 @@
                             "variant": "v7",
                             "os": "linux"
                         },
-                        "digest": "sha256:509457ef44666fea9129e02e0809a3290048019f8ee6d790f0a7ff3d468fdab2"
+                        "digest": "sha256:0f98ff27bfde43f50c47dcd6d4a68e8f4e937c17e8e6880ef4916c0a9b9c38b8"
+                    }
+                ],
+                "authors": [
+                    {
+                        "name": "Mads Peter Hammer Strand",
+                        "email": "mads@jmrobotics.no"
+                    }
+                ],
+                "filter_tags": [],
+                "extra_links": {},
+                "tag": "0.0.8",
+                "docs": null,
+                "readme": "No  added support for linux/arm/v7 (32-bit ARM)",
+                "support": "https://www.jmrobotics.no",
+                "requirements": "core >= 1",
+                "company": {
+                    "about": "",
+                    "name": "JM Robotics",
+                    "email": "support@jmrobotics.no"
+                },
+                "permissions": {
+                    "Env": [],
+                    "ExposedPorts": {
+                        "1339/tcp": {},
+                        "8139/tcp": {}
                     },
+                    "NetworkMode": "host",
+                    "HostConfig": {
+                        "Privileged": true,
+                        "Binds": [
+                            "/root/.config/jm-mux:/root/.config",
+                            "/var/run/docker.sock:/var/run/docker.sock"
+                        ],
+                        "ExtraHosts": [
+                            "host.docker.internal:host-gateway"
+                        ],
+                        "PortBindings": {
+                            "1339/tcp": [
+                                {
+                                    "HostPort": "1339"
+                                }
+                            ],
+                            "8139/tcp": [
+                                {
+                                    "HostPort": "8139"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "0.0.7": {
+                "identifier": "88d9adc3-8d1d-5dd6-be8b-2d5418c1efae",
+                "type": "other",
+                "website": "https://www.jmrobotics.no",
+                "images": [
                     {
                         "expanded_size": 104579258,
                         "platform": {
@@ -80,11 +135,393 @@
                         }
                     }
                 }
+            },
+            "0.0.7-linux-arm64": {
+                "identifier": "33368d0e-e8bb-5fa7-9e48-5f767e96a456",
+                "type": "other",
+                "website": "https://www.jmrobotics.no",
+                "images": [
+                    {
+                        "expanded_size": 104579258,
+                        "platform": {
+                            "architecture": "arm64",
+                            "variant": null,
+                            "os": "linux"
+                        },
+                        "digest": "sha256:9a290d3b1972c4b5aac2c995d19bef2b779b676323cbe06575dc38ccc5175e88"
+                    }
+                ],
+                "authors": [
+                    {
+                        "name": "Mads Peter Hammer Strand",
+                        "email": "mads@jmrobotics.no"
+                    }
+                ],
+                "filter_tags": [],
+                "extra_links": {},
+                "tag": "0.0.7-linux-arm64",
+                "docs": null,
+                "readme": "No README available",
+                "support": "https://www.jmrobotics.no",
+                "requirements": "core >= 1",
+                "company": {
+                    "about": "",
+                    "name": "JM Robotics",
+                    "email": "support@jmrobotics.no"
+                },
+                "permissions": {
+                    "Env": [],
+                    "ExposedPorts": {
+                        "1339/tcp": {},
+                        "8139/tcp": {}
+                    },
+                    "NetworkMode": "host",
+                    "HostConfig": {
+                        "Privileged": true,
+                        "Binds": [
+                            "/root/.config/jm-mux:/root/.config",
+                            "/var/run/docker.sock:/var/run/docker.sock"
+                        ],
+                        "ExtraHosts": [
+                            "host.docker.internal:host-gateway"
+                        ],
+                        "PortBindings": {
+                            "1339/tcp": [
+                                {
+                                    "HostPort": "1339"
+                                }
+                            ],
+                            "8139/tcp": [
+                                {
+                                    "HostPort": "8139"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "0.0.6": {
+                "identifier": "4f393b13-ed04-55f6-ba10-68f27938178f",
+                "type": "other",
+                "website": "https://www.jmrobotics.no",
+                "images": [],
+                "authors": [
+                    {
+                        "name": "Mads Peter Hammer Strand",
+                        "email": "mads@jmrobotics.no"
+                    }
+                ],
+                "filter_tags": [],
+                "extra_links": {},
+                "tag": "0.0.6",
+                "docs": null,
+                "readme": "No README available",
+                "support": "https://www.jmrobotics.no",
+                "requirements": "core >= 1",
+                "company": {
+                    "about": "",
+                    "name": "JM Robotics",
+                    "email": "support@jmrobotics.no"
+                },
+                "permissions": {
+                    "Env": [],
+                    "ExposedPorts": {
+                        "1339/tcp": {},
+                        "8139/tcp": {}
+                    },
+                    "NetworkMode": "host",
+                    "HostConfig": {
+                        "Privileged": true,
+                        "Binds": [
+                            "/root/.config/jm-mux:/root/.config",
+                            "/var/run/docker.sock:/var/run/docker.sock"
+                        ],
+                        "ExtraHosts": [
+                            "host.docker.internal:host-gateway"
+                        ],
+                        "PortBindings": {
+                            "1339/tcp": [
+                                {
+                                    "HostPort": "1339"
+                                }
+                            ],
+                            "8139/tcp": [
+                                {
+                                    "HostPort": "8139"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "0.0.5": {
+                "identifier": "8ebb7f57-3983-5935-90ec-c8fb146fa2b5",
+                "type": "other",
+                "website": "https://www.jmrobotics.no",
+                "images": [],
+                "authors": [
+                    {
+                        "name": "Mads Peter Hammer Strand",
+                        "email": "mads@jmrobotics.no"
+                    }
+                ],
+                "filter_tags": [],
+                "extra_links": {},
+                "tag": "0.0.5",
+                "docs": null,
+                "readme": "No README available",
+                "support": "https://www.jmrobotics.no",
+                "requirements": "core >= 1",
+                "company": {
+                    "about": "",
+                    "name": "JM Robotics",
+                    "email": "support@jmrobotics.no"
+                },
+                "permissions": {
+                    "Env": [],
+                    "ExposedPorts": {
+                        "1339/tcp": {},
+                        "8139/tcp": {}
+                    },
+                    "NetworkMode": "host",
+                    "HostConfig": {
+                        "Privileged": true,
+                        "Binds": [
+                            "/root/.config/jm-mux:/root/.config",
+                            "/var/run/docker.sock:/var/run/docker.sock"
+                        ],
+                        "ExtraHosts": [
+                            "host.docker.internal:host-gateway"
+                        ],
+                        "PortBindings": {
+                            "1339/tcp": [
+                                {
+                                    "HostPort": "1339"
+                                }
+                            ],
+                            "8139/tcp": [
+                                {
+                                    "HostPort": "8139"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "0.0.4": {
+                "identifier": "0af32375-5525-5f9a-ac60-75ad2031d86b",
+                "type": "other",
+                "website": "https://www.jmrobotics.no",
+                "images": [],
+                "authors": [
+                    {
+                        "name": "Mads Peter Hammer Strand",
+                        "email": "mads@jmrobotics.no"
+                    }
+                ],
+                "filter_tags": [],
+                "extra_links": {},
+                "tag": "0.0.4",
+                "docs": null,
+                "readme": "No README available",
+                "support": "https://www.jmrobotics.no",
+                "requirements": "core >= 1",
+                "company": {
+                    "about": "",
+                    "name": "JM Robotics",
+                    "email": "support@jmrobotics.no"
+                },
+                "permissions": {
+                    "Env": [],
+                    "ExposedPorts": {
+                        "1339/tcp": {},
+                        "8139/tcp": {}
+                    },
+                    "NetworkMode": "host",
+                    "HostConfig": {
+                        "Privileged": true,
+                        "Binds": [
+                            "/root/.config/jm-mux:/root/.config",
+                            "/var/run/docker.sock:/var/run/docker.sock"
+                        ],
+                        "ExtraHosts": [
+                            "host.docker.internal:host-gateway"
+                        ],
+                        "PortBindings": {
+                            "1339/tcp": [
+                                {
+                                    "HostPort": "1339"
+                                }
+                            ],
+                            "8139/tcp": [
+                                {
+                                    "HostPort": "8139"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "0.0.3": {
+                "identifier": "c854b971-d427-563d-af4c-e4cb116047a8",
+                "type": "other",
+                "website": "https://www.jmrobotics.no",
+                "images": [],
+                "authors": [
+                    {
+                        "name": "Mads Peter Hammer Strand",
+                        "email": "mads@jmrobotics.no"
+                    }
+                ],
+                "filter_tags": [],
+                "extra_links": {},
+                "tag": "0.0.3",
+                "docs": null,
+                "readme": "No README available",
+                "support": "https://www.jmrobotics.no",
+                "requirements": "core >= 1",
+                "company": {
+                    "about": "",
+                    "name": "JM Robotics",
+                    "email": "support@jmrobotics.no"
+                },
+                "permissions": {
+                    "Env": [],
+                    "ExposedPorts": {
+                        "1339/tcp": {},
+                        "8139/tcp": {}
+                    },
+                    "NetworkMode": "host",
+                    "HostConfig": {
+                        "Privileged": true,
+                        "Binds": [
+                            "/root/.config/\"${LABEL_NAME}\":/root/.config",
+                            "/var/run/docker.sock:/var/run/docker.sock"
+                        ],
+                        "ExtraHosts": [
+                            "host.docker.internal:host-gateway"
+                        ],
+                        "PortBindings": {
+                            "1339/tcp": [
+                                {
+                                    "HostPort": "1339"
+                                }
+                            ],
+                            "8139/tcp": [
+                                {
+                                    "HostPort": "8139"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "0.0.2": {
+                "identifier": "04136889-7759-57b5-9741-950013b9143d",
+                "type": "other",
+                "website": "https://www.jmrobotics.no",
+                "images": [],
+                "authors": [
+                    {
+                        "name": "Mads Peter Hammer Strand",
+                        "email": "mads@jmrobotics.no"
+                    }
+                ],
+                "filter_tags": [],
+                "extra_links": {},
+                "tag": "0.0.2",
+                "docs": null,
+                "readme": "No README available",
+                "support": "https://www.jmrobotics.no",
+                "requirements": "core >= 1",
+                "company": {
+                    "about": "",
+                    "name": "JM Robotics",
+                    "email": "support@jmrobotics.no"
+                },
+                "permissions": {
+                    "Env": [],
+                    "ExposedPorts": {
+                        "1339/tcp": {},
+                        "8139/tcp": {}
+                    },
+                    "NetworkMode": "host",
+                    "HostConfig": {
+                        "Privileged": true,
+                        "Binds": [
+                            "/root/.config/\"${LABEL_NAME}\":/root/.config",
+                            "/var/run/docker.sock:/var/run/docker.sock"
+                        ],
+                        "ExtraHosts": [
+                            "host.docker.internal:host-gateway"
+                        ],
+                        "PortBindings": {
+                            "1339/tcp": [
+                                {
+                                    "HostPort": "1339"
+                                }
+                            ],
+                            "8139/tcp": [
+                                {
+                                    "HostPort": "8139"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "0.0.1": {
+                "identifier": "2945cfbc-d838-5af0-a4b5-506bff423d0c",
+                "type": "other",
+                "website": "https://www.jmrobotics.no",
+                "images": [],
+                "authors": [
+                    {
+                        "name": "Mads Peter Hammer Strand",
+                        "email": "mads@jmrobotics.no"
+                    }
+                ],
+                "filter_tags": [],
+                "extra_links": {},
+                "tag": "0.0.1",
+                "docs": null,
+                "readme": "No README available",
+                "support": "https://www.jmrobotics.no",
+                "requirements": "core >= 1",
+                "company": {
+                    "about": "",
+                    "name": "JM Robotics",
+                    "email": "support@jmrobotics.no"
+                },
+                "permissions": {
+                    "Env": [],
+                    "ExposedPorts": {
+                        "8138/tcp": {}
+                    },
+                    "NetworkMode": "host",
+                    "HostConfig": {
+                        "Privileged": true,
+                        "Binds": [
+                            "/root/.config/\"${LABEL_NAME}\":/root/.config",
+                            "/var/run/docker.sock:/var/run/docker.sock"
+                        ],
+                        "ExtraHosts": [
+                            "host.docker.internal:host-gateway"
+                        ],
+                        "PortBindings": {
+                            "8138/tcp": [
+                                {
+                                    "HostPort": "8138"
+                                }
+                            ]
+                        }
+                    }
+                }
             }
         },
         "repo_info": {
             "downloads": 164,
-            "last_updated": "2025-08-01T10:39:21.641438Z",
+            "last_updated": "2025-11-10T11:39:21.000Z",
             "date_registered": "2025-02-07T13:50:36.944006Z"
         }
     }
